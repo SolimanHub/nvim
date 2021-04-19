@@ -1,6 +1,9 @@
 # Mis configuraciones Neovim
 
-`cd .config`
-`mkdir nvim`
-`cd nvim`
-git clone
+- `mkdir .config/plugged/`
+- `cd .config`
+- `mkdir nvim`
+- `cd nvim`
+- `git clone https://github.com/SolimanHub/neovim.git`
+- `nvim init.vim`
+- `:PlugInstall`
