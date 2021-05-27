@@ -4,5 +4,5 @@
 - `cd .config`
 - `mkdir plugged/`
 - `git clone https://github.com/SolimanHub/nvim.git`
-- `nvim init.vim`
+- `nvim nvim/init.vim`
 - `:PlugInstall`
