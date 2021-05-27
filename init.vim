@@ -14,6 +14,7 @@ Plug 'morhetz/gruvbox'
 
 " IDE "
 Plug 'easymotion/vim-easymotion'
+Plug 'scrooloose/nerdtree'
 
 call plug#end()
 
@@ -21,4 +22,9 @@ colorscheme gruvbox
 let g:gruvbox_contrast_dark = "hard"
 " Establece espacio como tecla lider "
 let mapleader=" "
+let NERDTreeQuitOnOpen=1
 nmap <Leader>s <Plug>(easymotion-s2)
+nmap <Leader>nt :NERDTreeFind<CR> 
+nmap <Leader>w :w!<CR> 
+nmap <Leader>q :q!<CR> 
+nmap <Leader>o :wq<CR> 
