@@ -73,6 +73,8 @@
   "inoremap {<CR> {<CR>}<C-o>O
   inoremap {<CR> {<CR>}<CR><C-o>k<C-o>O
   inoremap (<Space> (  )<C-o>h
+  inoremap (<C-Space> ()<C-o>a
   inoremap [<Space> [  ]<C-o>h
-  nnoremap <C-s> :w<CR>
-  
+  inoremap '<Space> ''<C-o>i
+  inoremap "<Space> ""<C-o>i
+  inoremap <C-s> :w<CR> 
