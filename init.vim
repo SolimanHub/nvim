@@ -78,3 +78,6 @@
   inoremap '<Space> ''<C-o>i
   inoremap "<Space> ""<C-o>i
   inoremap <C-s> :w<CR> 
+  "Atajos pra las opciones de modo normal en edicion"
+  inoremap p<C-Space> <C-o>p<C-o>A
+
