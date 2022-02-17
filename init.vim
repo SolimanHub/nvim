@@ -24,11 +24,9 @@
 
   "Fuente: https://www.iteramos.com/pregunta/50529/insertar-automaticamente-un-corchete-coincidente-en-vim
 
-  " los comentarios se hacen con comilla doble en .vimrc
-  " 
   call plug#begin('~/.config/plugged')
   " Temas
-  " Plug 'morhetz/gruvbox'
+  Plug 'morhetz/gruvbox'
   Plug 'gosukiwi/vim-atom-dark'
   Plug 'tomasr/molokai'
   " para indicar el nombre del paquete se usan comillas simples
@@ -45,6 +43,7 @@
 
   "colorscheme atom-dark
   "colorscheme molokai
+  colorscheme gruvbox
   
   let g:gruvbox_contrast_dark = "hard"
   let mapleader=" "
@@ -80,4 +79,3 @@
   inoremap <C-s> :w<CR> 
   "Atajos pra las opciones de modo normal en edicion"
   inoremap p<C-Space> <C-o>p<C-o>A
-
