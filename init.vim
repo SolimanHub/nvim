@@ -1,6 +1,6 @@
   "Notas a leer
   "
-  "#Los plugins se guardan en la ruta especificada en la linea 24
+  "#Los plugins se guardan en la ruta especificada en la linea 'call plug#begin' 
   "#Nuestro gestor de plugins es Plug
   "#Escribir :Plug + Tabl para ver opciones del complemento Plug
   "#Ctrl+y+, para activar las abreviaturas de emmet
@@ -51,9 +51,9 @@
   let NERDTreeQuitOnOpen=1
   nmap <Leader>s <Plug>(easymotion-s2)
   " espacio + s, seguido de 2 caracteres para saltar al lugar deseado
-  nmap <Leader>w :wa<CR>
-  nmap <Leader>q :qa<CR>
-  nmap <Leader>1 :wq<CR>
+  nmap <Leader>w :wa!<CR>
+  nmap <Leader>q :qa!<CR>
+  nmap <Leader>1 :wq!<CR>
   nmap <Leader>nt :NERDTreeFind<CR>
   nmap <Leader>1 :b1<CR>
   nmap <Leader>2 :b2<CR>
@@ -71,11 +71,18 @@
   
   "inoremap {<CR> {<CR>}<C-o>O
   inoremap {<CR> {<CR>}<CR><C-o>k<C-o>O
-  inoremap (<Space> (  )<C-o>h
+  inoremap {<Space> { }<C-o>h<C-o>h<C-o>i
+  inoremap (<Space> ( )<C-o>h<C-o>h<C-o>i
   inoremap (<C-Space> ()<C-o>a
-  inoremap [<Space> [  ]<C-o>h
-  inoremap '<Space> ''<C-o>i
-  inoremap "<Space> ""<C-o>i
+  inoremap [<Space> [ ]<C-o>h<C-o>h<C-o>i
+  inoremap '<Space> ' '<C-o>h<C-o>h<C-o>i
+  inoremap "<Space> " "<C-o>h<C-o>h<C-o>i
   inoremap <C-s> :w<CR> 
   "Atajos pra las opciones de modo normal en edicion"
-  inoremap p<C-Space> <C-o>p<C-o>A
+  inoremap p<C-Space> <C-o>P<C-o>A
+  inoremap 4<Space> <C-o>A
+  inoremap oo<Space> <C-o>o
+  inoremap /<Space> <C-o>/
+  inoremap OO <C-o>O
+  inoremap jk <Esc>
+  inoremap #c <C-o>I#
