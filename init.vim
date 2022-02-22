@@ -69,15 +69,18 @@
   nmap <Leader>l :nohlsearch<CR>
   nmap <Leader>n :RltvNmbr<CR>
   
-  "inoremap {<CR> {<CR>}<C-o>O
+  "Escribir al interior 
   inoremap {<CR> {<CR>}<CR><C-o>k<C-o>O
-  inoremap {<Space> { }<C-o>h<C-o>h<C-o>i
-  inoremap (<Space> ( )<C-o>h<C-o>h<C-o>i
+  inoremap <CR> <CR> <C-o>h<C-o>O
+  inoremap {<Space> {}<C-o>h<C-o>i
+  inoremap (<Space> ()<C-o>h<C-o>i
+  inoremap [<Space> []<C-o>h<C-o>i
+  inoremap '<Space> ''<C-o>h<C-o>i
+  inoremap "<Space> ""<C-o>h<C-o>i
+
+  "Escribir al exterior
   inoremap (<C-Space> ()<C-o>a
-  inoremap [<Space> [ ]<C-o>h<C-o>h<C-o>i
-  inoremap '<Space> ' '<C-o>h<C-o>h<C-o>i
-  inoremap "<Space> " "<C-o>h<C-o>h<C-o>i
-  inoremap <C-s> :w<CR> 
+
   "Atajos pra las opciones de modo normal en edicion"
   inoremap p<C-Space> <C-o>P<C-o>A
   inoremap 4<Space> <C-o>A
@@ -85,4 +88,5 @@
   inoremap /<Space> <C-o>/
   inoremap OO <C-o>O
   inoremap jk <Esc>
-  inoremap #c <C-o>I#
+
+  "inoremap <C-s> :w<CR>
