@@ -20,6 +20,11 @@
   set showmatch
   set sw=2
   set laststatus=2
+  " PYTHOM
+  autocmd FileType python set sw=4
+  autocmd FileType python set ts=4
+  autocmd FileType python set sts=4  
+   
 
 
   "Fuente: https://www.iteramos.com/pregunta/50529/insertar-automaticamente-un-corchete-coincidente-en-vim
@@ -33,6 +38,7 @@
   
   " IDE
   Plug 'scrooloose/nerdtree'
+  Plug 'vim-python/python-syntax'
   Plug 'ryanoasis/vim-devicons'
   Plug 'easymotion/vim-easymotion'
   Plug 'mattn/emmet-vim'
@@ -68,10 +74,11 @@
   "para limpiar la pantalla de la busqueda
   nmap <Leader>l :nohlsearch<CR>
   nmap <Leader>n :RltvNmbr<CR>
+  ""Realiza una nueva linea sin entrar en edicion
+  nmap <Leader>o :s/\(.\)\n\(.\)/\1\r\r\2/<CR><C-o>:nohlsearch<CR>
   
   "Escribir al interior 
   inoremap {<CR> {<CR>}<CR><C-o>k<C-o>O
-  inoremap <CR> <CR> <C-o>h<C-o>O
   inoremap {<Space> {}<C-o>h<C-o>i
   inoremap (<Space> ()<C-o>h<C-o>i
   inoremap [<Space> []<C-o>h<C-o>i
@@ -87,6 +94,13 @@
   inoremap oo<Space> <C-o>o
   inoremap /<Space> <C-o>/
   inoremap OO <C-o>O
+  inoremap hj <C-o>j
+  inoremap hl <C-o>a
+  inoremap hk <C-o>k
+  inoremap dd <C-o>d<C-o>d
   inoremap jk <Esc>
 
   "inoremap <C-s> :w<CR>
+  "" 
+  ""Atajos en modo normal
+
