@@ -4,8 +4,6 @@
   "#Nuestro gestor de plugins es Plug
   "#Escribir :Plug + Tabl para ver opciones del complemento Plug
   "#Ctrl+y+, para activar las abreviaturas de emmet
-  "
-  "
   set number!
   set ignorecase smartcase
   "set mouse=a
@@ -37,13 +35,16 @@
   " para indicar el nombre del paquete se usan comillas simples
   
   " IDE
-  Plug 'scrooloose/nerdtree'
-  Plug 'vim-python/python-syntax'
-  Plug 'ryanoasis/vim-devicons'
-  Plug 'easymotion/vim-easymotion'
+  Plug 'airblade/vim-gitgutter'				"Ver cambios en git
+  Plug 'easymotion/vim-easymotion'			"Space-s busqueda rapida
+  Plug 'KKPMW/vim-sendtowindow'
   Plug 'mattn/emmet-vim'
-  Plug 'vim-scripts/RltvNmbr.vim'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  Plug 'ryanoasis/vim-devicons'
+  Plug 'scrooloose/nerdtree'
+  Plug 'tpope/vim-fugitive'				"Permite comandos git en la session
+  Plug 'vim-python/python-syntax'
+  Plug 'vim-scripts/RltvNmbr.vim'
 
   call plug#end()
 
@@ -84,6 +85,7 @@
   inoremap [<Space> []<C-o>h<C-o>i
   inoremap '<Space> ''<C-o>h<C-o>i
   inoremap "<Space> ""<C-o>h<C-o>i
+  inoremap %% {%  %}<C-o>h<C-o>h<C-o>h<C-o>i
 
   "Escribir al exterior
   inoremap (<C-Space> ()<C-o>a
@@ -97,7 +99,6 @@
   inoremap hj <C-o>j
   inoremap hl <C-o>a
   inoremap hk <C-o>k
-  inoremap dd <C-o>d<C-o>d
   inoremap jk <Esc>
 
   "inoremap <C-s> :w<CR>
