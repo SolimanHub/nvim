@@ -6,3 +6,4 @@
 - `git clone https://github.com/SolimanHub/nvim.git`
 - `nvim nvim/init.vim`
 - `:PlugInstall`
+- `:CocInstall coc-json coc-tsserver` (este paso podria demorar)
