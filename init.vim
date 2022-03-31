@@ -73,13 +73,16 @@
   nmap <Leader>9 :b9<CR>
   nmap <Leader>0 :b0<CR>
   "para limpiar la pantalla de la busqueda
-  nmap <Leader>l :nohlsearch<CR>
+  nmap <C>l :nohlsearch<CR>
   nmap <Leader>n :RltvNmbr<CR>
+  nmap <Leader>t :tabnew<Space>
   ""Realiza una nueva linea sin entrar en edicion
   nmap <Leader>o :s/\(.\)\n\(.\)/\1\r\r\2/<CR><C-o>:nohlsearch<CR>
   
   "Escribir al interior 
   inoremap {<CR> {<CR>}<CR><C-o>k<C-o>O
+  autocmd FileType css inoremap {<CR> {<CR>/**/<CR>}<CR><C-o>k<C-o>O
+  autocmd FileType javascript inoremap {<CR> {<CR>}<CR><C-o>k<C-o>O//<C-o>o<C-o>x<C-o>x
   inoremap {<Space> {}<C-o>h<C-o>i
   inoremap (<Space> ()<C-o>h<C-o>i
   inoremap [<Space> []<C-o>h<C-o>i
