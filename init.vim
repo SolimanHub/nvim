@@ -83,6 +83,7 @@
   inoremap {<CR> {<CR>}<CR><C-o>k<C-o>O
   autocmd FileType css inoremap {<CR> {<CR>/**/<CR>}<CR><C-o>k<C-o>O
   autocmd FileType javascript inoremap {<CR> {<CR>}<CR><C-o>k<C-o>O//<C-o>o<C-o>x<C-o>x
+  autocmd FileType javascript inoremap if<Space> if(){<CR>}<CR><C-o>k<C-o>O//<C-o>o<C-o>x<C-o>x
   inoremap {<Space> {}<C-o>h<C-o>i
   inoremap (<Space> ()<C-o>h<C-o>i
   inoremap [<Space> []<C-o>h<C-o>i
@@ -96,6 +97,7 @@
   "Atajos pra las opciones de modo normal en edicion"
   inoremap p<C-Space> <C-o>P<C-o>A
   inoremap 4<Space> <C-o>A
+  inoremap 0<Space> <C-o>I
   inoremap oo<Space> <C-o>o
   inoremap /<Space> <C-o>/
   inoremap OO <C-o>O
