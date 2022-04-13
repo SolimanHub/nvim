@@ -82,10 +82,11 @@
   "Escribir al interior 
   inoremap {<CR> {<CR>}<CR><C-o>k<C-o>O
   autocmd FileType html inoremap <!<Space> <!--<Space><Space><Space>--><C-o>h<C-o>h<C-o>h<C-o>h
+  autocmd FileType html inoremap id= id=''<Space><C-o>h<C-o>h<C-o>i
   autocmd FileType css inoremap {<CR> {<CR>/**/<CR>}<CR><C-o>k<C-o>O
   autocmd FileType javascript inoremap {<CR> {<CR>}<CR><C-o>k<C-o>O//<C-o>o<C-o>x<C-o>x
-  autocmd FileType javascript inoremap if<Space> if(){<CR>}<CR><C-o>k<C-o>O//<C-o>o<C-o>x<C-o>x
-  autocmd FileType php inoremap if<Space> if(){<CR>}<CR><C-o>k<C-o>O//<C-o>o<C-o>x<C-o>x
+  autocmd FileType javascript inoremap if<Space> if(){<CR>}<CR><C-o>k<C-o>O//<C-o>o<C-o>x<C-o>x<C-o>k<C-o>k<C-o>l
+  autocmd FileType php inoremap if<Space> if(){<CR>}<CR><C-o>k<C-o>O#<C-o>o<C-o>x<C-o>x<C-o>k<C-o>k<C-o>l
   autocmd FileType php inoremap else<Space> else{<CR>}<CR><C-o>k<C-o>O
   inoremap {<Space> {}<C-o>h<C-o>i
   inoremap (<Space> ()<C-o>h<C-o>i
