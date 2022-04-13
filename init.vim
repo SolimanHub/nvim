@@ -81,31 +81,24 @@
   
   "Escribir al interior 
   inoremap {<CR> {<CR>}<CR><C-o>k<C-o>O
-  autocmd FileType html inoremap <!<Space> <!--<Space><Space><Space>--><C-o>h<C-o>h<C-o>h<C-o>h
-  autocmd FileType html inoremap id= id=''<Space><C-o>h<C-o>h<C-o>i
-  autocmd FileType css inoremap {<CR> {<CR>/**/<CR>}<CR><C-o>k<C-o>O
-  autocmd FileType javascript inoremap {<CR> {<CR>}<CR><C-o>k<C-o>O//<C-o>o<C-o>x<C-o>x
-  autocmd FileType javascript inoremap if<Space> if(){<CR>}<CR><C-o>k<C-o>O//<C-o>o<C-o>x<C-o>x<C-o>k<C-o>k<C-o>l
-  autocmd FileType php inoremap if<Space> if(){<CR>}<CR><C-o>k<C-o>O#<C-o>o<C-o>x<C-o>x<C-o>k<C-o>k<C-o>l
-  autocmd FileType php inoremap else<Space> else{<CR>}<CR><C-o>k<C-o>O
   inoremap {<Space> {}<C-o>h<C-o>i
   inoremap (<Space> ()<C-o>h<C-o>i
   inoremap [<Space> []<C-o>h<C-o>i
   inoremap '<Space> ''<C-o>h<C-o>i
   inoremap "<Space> ""<C-o>h<C-o>i
-  inoremap %% {%  %}<C-o>h<C-o>h<C-o>h<C-o>i
 
   "Escribir al exterior
   inoremap (<C-Space> ()<C-o>a
 
   "Atajos pra las opciones de modo normal en edicion"
-  inoremap p<C-Space> <C-o>P<C-o>A
+  inoremap p' <C-o>P<C-o>A
   inoremap 4<Space> <C-o>A
   inoremap 0<Space> <C-o>I
   inoremap oo<Space> <C-o>o
-  inoremap /<Space> <C-o>/
+  inoremap 'b <C-o>/
   inoremap OO <C-o>O
   inoremap hj <C-o>j
+  ""Correr el cursor un espacio a la derecha en modo edicion
   inoremap hl <C-o>a
   inoremap hk <C-o>k
   inoremap jk <Esc>
@@ -113,4 +106,13 @@
   "inoremap <C-s> :w<CR>
   "" 
   ""Atajos en modo normal
-
+  ""Especificos de algunos archivos
+  autocmd FileType html inoremap ''' <!--<Space><Space><Space>--><C-o>h<C-o>h<C-o>h<C-o>h<C-o>x
+  autocmd FileType html inoremap id= id=''<Space><C-o>h<C-o>h<C-o>i
+  autocmd FileType css inoremap {<CR> {<CR>/**/<CR>}<CR><C-o>k<C-o>O
+  autocmd FileType javascript inoremap {<CR> {<CR>}<CR><C-o>k<C-o>O//<C-o>o<C-o>x<C-o>x
+  autocmd FileType javascript inoremap if<Space> if(){<CR>}<CR><C-o>k<C-o>O//<C-o>o<C-o>x<C-o>x<C-o>k<C-o>k<C-o>l
+  autocmd FileType php inoremap if<Space> if(){<CR>}<CR><C-o>k<C-o>O#<C-o>o<C-o>x<C-o>x<C-o>k<C-o>k<C-o>l
+  autocmd FileType php inoremap else<Space> else{<CR>}<CR><C-o>k<C-o>O
+  autocmd FileType php inoremap php<Space> <?php<CR>?><C-o>k<C-o>o
+  autocmd FileType python noremap %% {%  %}<C-o>h<C-o>h<C-o>h<C-o>i
