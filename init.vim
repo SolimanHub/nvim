@@ -102,17 +102,24 @@
   inoremap hl <C-o>a
   inoremap hk <C-o>k
   inoremap jk <Esc>
+  inoremap a` á
+  inoremap e` é
+  inoremap i` í
+  inoremap o` ó
+  inoremap u` ú
+  inoremap ;' ñ
 
   "inoremap <C-s> :w<CR>
   "" 
   ""Atajos en modo normal
   ""Especificos de algunos archivos
   autocmd FileType html inoremap ''' <!--<Space><Space><Space>--><C-o>h<C-o>h<C-o>h<C-o>h<C-o>x
-  autocmd FileType html inoremap id= id=''<Space><C-o>h<C-o>h<C-o>i
+  autocmd FileType html inoremap id id=''<Space><C-o>h<C-o>h<C-o>i
   autocmd FileType css inoremap {<CR> {<CR>/**/<CR>}<CR><C-o>k<C-o>O
   autocmd FileType javascript inoremap {<CR> {<CR>}<CR><C-o>k<C-o>O//<C-o>o<C-o>x<C-o>x
   autocmd FileType javascript inoremap if<Space> if(){<CR>}<CR><C-o>k<C-o>O//<C-o>o<C-o>x<C-o>x<C-o>k<C-o>k<C-o>l
   autocmd FileType php inoremap if<Space> if(){<CR>}<CR><C-o>k<C-o>O#<C-o>o<C-o>x<C-o>x<C-o>k<C-o>k<C-o>l
   autocmd FileType php inoremap else<Space> else{<CR>}<CR><C-o>k<C-o>O
-  autocmd FileType php inoremap php<Space> <?php<CR>?><C-o>k<C-o>o
+  autocmd FileType php inoremap php <?php<CR>?><C-o>k<C-o>o
+  autocmd FileType php inoremap $p $_POST['']<C-o>h<C-o>h<C-o>i
   autocmd FileType python noremap %% {%  %}<C-o>h<C-o>h<C-o>h<C-o>i
