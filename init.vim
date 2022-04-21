@@ -118,6 +118,7 @@
   autocmd FileType css inoremap {<CR> {<CR>/**/<CR>}<CR><C-o>k<C-o>O
   autocmd FileType javascript inoremap {<CR> {<CR>}<CR><C-o>k<C-o>O//<C-o>o<C-o>x<C-o>x
   autocmd FileType javascript inoremap if<Space> if(){<CR>}<CR><C-o>k<C-o>O//<C-o>o<C-o>x<C-o>x<C-o>k<C-o>k<C-o>l
+  autocmd FileType javascript inoremap $<Space> $('').<C-o>h<C-o>h<C-o>i
   autocmd FileType php inoremap if<Space> if(){<CR>}<CR><C-o>k<C-o>O#<C-o>o<C-o>x<C-o>x<C-o>k<C-o>k<C-o>l
   autocmd FileType php inoremap else<Space> else{<CR>}<CR><C-o>k<C-o>O
   autocmd FileType php inoremap php <?php<CR>?><C-o>k<C-o>o
