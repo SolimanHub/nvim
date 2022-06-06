@@ -65,7 +65,11 @@
   Plug 'tpope/vim-fugitive'				"Permite comandos git en la session
   Plug 'vim-python/python-syntax'
   Plug 'vim-scripts/RltvNmbr.vim'
+<<<<<<< HEAD
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}		"Para parsear el contenido del fichero
+=======
+  Plug 'ap/vim-css-color'				"Colores css
+>>>>>>> e2a1ae83ceae148752a2fc72430af6a84e01b6a3
 
   call plug#end()
 
@@ -105,6 +109,7 @@
   nmap <Leader>t :tabnew<Space>
   ""Realiza una nueva linea sin entrar en edicion
   nmap <Leader>o :s/\(.\)\n\(.\)/\1\r\r\2/<CR><C-o>:nohlsearch<CR>
+  """xnoremap <Space>6 <C-o>:'<,'>s/^/\/\/<CR>
   
   "Escribir al interior 
   inoremap {<CR> {<CR>}<CR><C-o>k<C-o>O
@@ -118,7 +123,6 @@
   inoremap (<C-Space> ()<C-o>a
 
   "Atajos pra las opciones de modo normal en edicion"
-  inoremap p' <C-o>P<C-o>A
   inoremap 4<Space> <C-o>A
   inoremap 0<Space> <C-o>I
   inoremap oo<Space> <C-o>o
@@ -135,6 +139,7 @@
   inoremap o` ó
   inoremap u` ú
   inoremap ;' ñ
+  inoremap p' <C-o>P<C-o>A
 
   "inoremap <C-s> :w<CR>
   "" 
