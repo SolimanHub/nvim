@@ -26,7 +26,24 @@
   autocmd FileType php set ts=1
   autocmd FileType php set sts=1  
    
+  ""Configuracions para coc
 
+  set updatetime=100
+  set pumheight=20
+
+  inoremap <silent><expr> <TAB>
+	\ pumvisible() ? coc#_select_confirm() :
+	\ coc#expandableOrJumpable() ?
+	\ "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
+	\ <SID>check_back_space() ? "\<TAB>" :
+	\ coc#refresh()
+
+      function! s:check_back_space() abort
+	let col = col('.') - 1
+	return !col || getline('.')[col - 1]  =~# '\s'
+      endfunction
+
+      let g:coc_snippet_next = '<tab>'
 
   "Fuente: https://www.iteramos.com/pregunta/50529/insertar-automaticamente-un-corchete-coincidente-en-vim
 
@@ -48,6 +65,7 @@
   Plug 'tpope/vim-fugitive'				"Permite comandos git en la session
   Plug 'vim-python/python-syntax'
   Plug 'vim-scripts/RltvNmbr.vim'
+  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}		"Para parsear el contenido del fichero
 
   call plug#end()
 
@@ -61,6 +79,12 @@
   let NERDTreeQuitOnOpen=1
   nmap <Leader>s <Plug>(easymotion-s2)
   " espacio + s, seguido de 2 caracteres para saltar al lugar deseado
+  " Atajos para coc
+  nmap <leader>gd <Plug>(coc-definition)
+  nmap <leader>gr <Plug>(coc-references)
+
+  ""Otros atajos
+  nmap <leader>gi <Plug>(coc-implementation)
   nmap <Leader>w :wa!<CR>
   nmap <Leader>q :qa!<CR>
   nmap <Leader>1 :wq!<CR>
@@ -117,7 +141,7 @@
   ""Atajos en modo normal
   ""Especificos de algunos archivos
   autocmd FileType html inoremap ''' <!--<Space><Space><Space>--><C-o>h<C-o>h<C-o>h<C-o>h<C-o>x
-  autocmd FileType html inoremap id= id=''<Space><C-o>h<C-o>h<C-o>i
+  autocmd FileType html inoremap <Space>id<Space> id=""<Space><C-o>h<C-o>h<C-o>i
   autocmd FileType css inoremap {<CR> {<CR>/**/<CR>}<CR><C-o>k<C-o>O
   autocmd FileType javascript inoremap {<CR> {<CR>}<CR><C-o>k<C-o>O//<C-o>o<C-o>x<C-o>x
   autocmd FileType javascript inoremap if<Space> if(){<CR>}<CR><C-o>k<C-o>O//<C-o>o<C-o>x<C-o>x<C-o>k<C-o>k<C-o>l
@@ -127,3 +151,4 @@
   autocmd FileType php inoremap php <?php<CR>?><C-o>k<C-o>o
   autocmd FileType php inoremap $p $_POST['']<C-o>h<C-o>h<C-o>i
   autocmd FileType python noremap %% {%  %}<C-o>h<C-o>h<C-o>h<C-o>i
+
