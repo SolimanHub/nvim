@@ -65,11 +65,8 @@
   Plug 'tpope/vim-fugitive'				"Permite comandos git en la session
   Plug 'vim-python/python-syntax'
   Plug 'vim-scripts/RltvNmbr.vim'
-<<<<<<< HEAD
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}		"Para parsear el contenido del fichero
-=======
   Plug 'ap/vim-css-color'				"Colores css
->>>>>>> e2a1ae83ceae148752a2fc72430af6a84e01b6a3
 
   call plug#end()
 
