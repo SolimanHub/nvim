@@ -154,3 +154,5 @@
   autocmd FileType php inoremap $p $_POST['']<C-o>h<C-o>h<C-o>i
   autocmd FileType python noremap %% {%  %}<C-o>h<C-o>h<C-o>h<C-o>i
 
+  "" Atajos en modo Vision
+  vmap <Leader>2 :s/\%V\(.*\)\%V/"\1"/<CR>
