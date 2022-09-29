@@ -156,3 +156,5 @@
 
   "" Atajos en modo Vision
   vmap <Leader>2 :s/\%V\(.*\)\%V/"\1"/<CR>
+  autocmd FileType javascript vmap <Leader>c :s/\%V\(.*\)\%V/\/\/\1/<CR>
+  autocmd FileType php vmap <Leader>c :s/\%V\(.*\)\%V/#\1/<CR>
