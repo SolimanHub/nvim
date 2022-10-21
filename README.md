@@ -4,6 +4,7 @@
 - `cd .config`
 - `mkdir plugged/`
 - `git clone https://github.com/SolimanHub/nvim.git`
+- `git clone git@github.com:SolimanHub/nvim.git`
 - `nvim nvim/init.vim`
 - `:PlugInstall`
-- `:CocInstall coc-json coc-tsserver` (este paso podria demorar)
+- `:CocInstall coc-json coc-tsserver coc-css coc-cssmodules coc-diagnostic coc-docker coc-emmet coc-html coc-htmldjango coc-html-css-support coc-intelephense coc-lightbulb coc-markdownlint coc-markdown-preview-enhanced coc-python coc-phpls coc-sh` (este paso podria demorar)
