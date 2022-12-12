@@ -18,10 +18,13 @@
   set showmatch
   set sw=2
   set laststatus=2
+
   " PYTHOM
   autocmd FileType python set sw=4
   autocmd FileType python set ts=4
   autocmd FileType python set sts=4  
+
+  " PHP
   autocmd FileType php set sw=1
   autocmd FileType php set ts=1
   autocmd FileType php set sts=1  
@@ -30,22 +33,6 @@
 
   set updatetime=100
   set pumheight=20
-
-  inoremap <silent><expr> <TAB>
-	\ pumvisible() ? coc#_select_confirm() :
-	\ coc#expandableOrJumpable() ?
-	\ "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
-	\ <SID>check_back_space() ? "\<TAB>" :
-	\ coc#refresh()
-
-      function! s:check_back_space() abort
-	let col = col('.') - 1
-	return !col || getline('.')[col - 1]  =~# '\s'
-      endfunction
-
-      let g:coc_snippet_next = '<tab>'
-
-  "Fuente: https://www.iteramos.com/pregunta/50529/insertar-automaticamente-un-corchete-coincidente-en-vim
 
   call plug#begin('~/.config/plugged')
   " Temas
@@ -150,7 +137,7 @@
   autocmd FileType javascript inoremap $<Space> $('').<C-o>h<C-o>h<C-o>i
   autocmd FileType php inoremap if<Space> if(){<CR>}<CR><C-o>k<C-o>O#<C-o>o<C-o>x<C-o>x<C-o>k<C-o>k<C-o>l
   autocmd FileType php inoremap else<Space> else{<CR>}<CR><C-o>k<C-o>O
-  autocmd FileType php inoremap php <?php<CR>?><C-o>k<C-o>o
+  autocmd FileType php inoremap cophp <?php<CR>?><C-o>k<C-o>o
   autocmd FileType php inoremap $p $_POST['']<C-o>h<C-o>h<C-o>i
   autocmd FileType python noremap %% {%  %}<C-o>h<C-o>h<C-o>h<C-o>i
 
