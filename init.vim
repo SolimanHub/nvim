@@ -8,8 +8,10 @@
   set ignorecase smartcase
   "set mouse=a
   "set nohlsearch
-  set numberwidth=1
-  set clipboard=unnamed
+  set numberwidth=1git push
+Enter passphrase for key '/home/rx/.ssh/id_ed25519':
+Everything up-to-date
+  set clipboard+=unnamedplus
   syntax enable
   set showcmd
   set ruler
