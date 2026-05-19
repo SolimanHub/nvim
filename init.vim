@@ -4,13 +4,12 @@
   "#Nuestro gestor de plugins es Plug
   "#Escribir :Plug + Tabl para ver opciones del complemento Plug
   "#Ctrl+y+, para activar las abreviaturas de emmet
-  set number!
+  set rnu
+  set number
   set ignorecase smartcase
   "set mouse=a
   "set nohlsearch
-  set numberwidth=1git push
-Enter passphrase for key '/home/rx/.ssh/id_ed25519':
-Everything up-to-date
+  set numberwidth=1
   set clipboard+=unnamedplus
   syntax enable
   set showcmd
